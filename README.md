@@ -1,7 +1,7 @@
 # MIST4610 Project 1 Group B3
 
 ## Team Name: 
-47114 B3
+47114 Group B3
 
 ## Team Members:
 1. Landon Johnson
