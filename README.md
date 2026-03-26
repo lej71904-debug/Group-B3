@@ -1,4 +1,4 @@
-# Group-B3
+# MIST4610 Project 1 Group B3
 
 ## Team Name: 
 47114 B3
