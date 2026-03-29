@@ -38,7 +38,7 @@ Finally, the Staff entity stores information about LMC employees who help coordi
 
 Together, these entities and relationships allow the database to accurately track venues, artists, events, ticket sales, vendors, and resource allocations involved in LMC’s live music operations.
 
-![4160DataModel jpg](https://github.com/user-attachments/assets/05cd13d0-5dbe-4283-a6a0-c79994f257c3)
+
 
 ## Data Dictionary:
 
