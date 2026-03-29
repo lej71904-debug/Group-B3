@@ -11,6 +11,13 @@
 5. Lawrence Carpenter
 
 ## Problem Description:
+The objective of this project is to design and implement a relational database that models the operations of The Live Music Circuit (LMC). LMC is responsible for coordinating live music events, managing venue partnerships, scheduling artists, and allocating production resources needed for shows.
+
+The central entity in the model is the Event, which represents a specific live performance occurring at a venue on a given date and time. Each event is associated with a venue, includes one or more artists performing, and is managed by designated staff members. Events may also involve vendors selling products and customers purchasing tickets.
+
+The database must capture key relationships between the different entities involved in organizing and running these events. These include relationships between venues and their affiliations with other venues, artists and their bookings for events, customers and their ticket purchases, and vendors participating in events. Additionally, the system must track production resources and equipment that LMC allocates to events, including scheduling details such as load-in and load-out times.
+
+By building this relational database, we can store structured data about LMC’s operations, populate the system with sample data, and run queries that provide valuable insights. These insights may include information about event scheduling, ticket sales, vendor participation, artist bookings, and resource usage. Ultimately, the database allows LMC to manage its operations more efficiently and make informed decisions regarding its live music events.
 
 ## Data Model:
 Our data model represents the operations of The Live Music Circuit (LMC), a company that coordinates live music performances, venue partnerships, and production resources for shows in and around Athens, Georgia.
@@ -30,6 +37,7 @@ Another important component of the model is the management of production equipme
 Finally, the Staff entity stores information about LMC employees who help coordinate events. Staff members can manage multiple events, which is why the Event table includes references to the coordinator and backup coordinator.
 
 Together, these entities and relationships allow the database to accurately track venues, artists, events, ticket sales, vendors, and resource allocations involved in LMC’s live music operations.
+
 ![4160DataModel jpg](https://github.com/user-attachments/assets/05cd13d0-5dbe-4283-a6a0-c79994f257c3)
 
 ## Data Dictionary:
