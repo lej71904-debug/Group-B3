@@ -13,6 +13,23 @@
 ## Problem Description:
 
 ## Data Model:
+Our data model represents the operations of The Live Music Circuit (LMC), a company that coordinates live music performances, venue partnerships, and production resources for shows in and around Athens, Georgia.
+
+The model centers around the Event entity, which represents a specific live music show occurring at a venue on a particular date and time. Each event includes attributes such as the event date, advertised start time, age policy for that night, and whether the event is ticketed. Every event is hosted at a single venue and is managed by two staff members: one assigned as the event coordinator and another assigned as a backup coordinator.
+
+The Venue entity stores information about locations that host events, including the venue name, address, phone number, capacity, age policy, and partner status with LMC. Venues may have relationships with other venues in the LMC network, such as shared ownership or equipment partnerships. Because a venue can be affiliated with many other venues and affiliations involve two venues, we created the VenueAffiliation associative entity. This table records the two venues involved, the type of affiliation, and the start and end dates of the relationship so that historical affiliations can be tracked.
+
+Another key entity in the model is Artist, which represents bands or solo performers that play at events. Because each event may feature multiple artists and each artist can perform at many events, a many-to-many relationship exists between Artist and Event. This relationship is resolved through the ArtistBooking associative entity. The ArtistBooking table records which artists are performing at which events, the format of the performance, and the artist’s slot order (such as opener or headliner).
+
+The model also tracks customers and ticket purchases. The Customer entity stores information about individuals who purchase tickets, including their name, email, and phone number. Customers may purchase multiple tickets for different events, so there is a one-to-many relationship between Customer and Ticket. The Ticket entity records information about each ticket purchase, including the ticket price, ticket type, purchase date, and the event associated with the ticket.
+
+LMC also works with vendors who provide services or products at events, such as merchandise stands or food vendors. Vendors are represented by the Vendor entity, which stores information such as vendor name, contact information, and product type. Because vendors can participate in multiple events and events can include multiple vendors, a many-to-many relationship exists between Event and Vendor. This relationship is implemented through the EventVendors associative entity, which also records the booth location assigned to each vendor at an event.
+
+Another important component of the model is the management of production equipment and other resources used during events. ResourceType represents categories of resources (for example sound systems, lighting kits, or microphones), and includes pricing rates for both partner and non-partner venues. ResourceItem represents individual physical items belonging to each resource type, each with a unique inventory ID and condition rating. Resources are assigned to events through the ResourceAllocation associative entity, which records the event, the specific resource item used, and the planned load-in and load-out times as well as the actual return time.
+
+Finally, the Staff entity stores information about LMC employees who help coordinate events. Staff members can manage multiple events, which is why the Event table includes references to the coordinator and backup coordinator.
+
+Together, these entities and relationships allow the database to accurately track venues, artists, events, ticket sales, vendors, and resource allocations involved in LMC’s live music operations.
 ![4160DataModel jpg](https://github.com/user-attachments/assets/05cd13d0-5dbe-4283-a6a0-c79994f257c3)
 
 ## Data Dictionary:
