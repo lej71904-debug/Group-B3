@@ -45,3 +45,4 @@ Together, these entities and relationships allow the database to accurately trac
 ## Queries:
 
 ## Database Information:
+Name of the database: mb_B3
