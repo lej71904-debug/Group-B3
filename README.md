@@ -57,6 +57,16 @@ Together, these entities and relationships allow the database to accurately trac
 
 
 ## Queries:
+1. Query 1
+2. Query 2
+3. Query 3
+4. Query 4
+5. Query 5
+6. Query 6
+7. Query 7
+8. Query 8
+9. Query 9
+10. Query 10
 
 ## Database Information:
 Name of the database: mb_B3
