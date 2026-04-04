@@ -57,15 +57,16 @@ Events and resource items have a many-to-many relationship because an event can 
 
 
 ## Queries:
-1. Lists all artists including their ID, name, and contact phone number, ordered alphabetically by artist name.
+1. Lists all artists including their ID, name, contact phone number, and the number of events they are booked for, ordered alphabetically by artist name.
+<img width="906" height="632" alt="Query1" src="https://github.com/user-attachments/assets/7e064139-eb88-4124-b280-36d7cbb45f74" />
 
 
-Query 1 allows users to view and organize all artists in the system along with their ID and contact information. Sorting alphabetically by name makes it easier to locate a specific artist and maintain organized records. This is useful for administrative tasks such as contacting artists or managing artist-related data.
+Query 1 allows users to view and organize all artists in the system along with their ID, contact information, and the number of events they are scheduled for. Using a LEFT JOIN with the ArtistBooking table ensures that artists with no bookings are still included. Sorting alphabetically by name makes it easier to locate a specific artist and maintain organized records. This is useful for administrative tasks such as contacting artists or tracking how active each artist is.
 
-2.Lists all venues including their ID, name, address, capacity, and type (if available), ordered alphabetically by venue name.
+2. Lists all venues including their ID, name, address, capacity, type (if available), and the number of events held at each, ordered alphabetically by venue name.
+<img width="942" height="638" alt="Query2" src="https://github.com/user-attachments/assets/6465b55c-4ef0-44a2-85a4-c28799d67e24" />
 
-
-Query 2 provides a complete overview of all venues in the system along with key details such as ID, name, address, capacity, and type (if available). Including the venue type gives more context for planning events. This allows users to understand venue sizes and locations, which is helpful when planning events, comparing venues, or scheduling purposes.
+Query 2 provides a complete overview of all venues along with their ID, name, address, capacity, type (if available), and the number of events held there. Using a LEFT JOIN with the Event table ensures that venues with no scheduled events are still included. This helps users understand venue activity while planning or comparing locations. Sorting alphabetically makes it easier to reference each venue.
 
 3. Shows all events along with the name of the venue where each event is being held.
 <img width="718" height="578" alt="Query3" src="https://github.com/user-attachments/assets/ea77d70a-7f68-4cb2-a8f2-f184bf4f3c26" />
