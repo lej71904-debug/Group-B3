@@ -57,15 +57,45 @@ Events and resource items have a many-to-many relationship because an event can 
 
 
 ## Queries:
-1. Query 1
-2. Query 2
+1. Query 1	Show all artists. List their ID, name, and contact phone number
+Select artist_ID, artist_Name, artist_ContactPhone
+From artist
+Order by artist_name;
+
+2. Query 2	List all venues with its ID, Name, Address, and capacity
+Select ven_ID, ven_Name, ven_Address, ven_Capacity
+From Venue;
+
 3. Query 3
+
 4. Query 4
-5. Query 5
-6. Query 6
-7. Query 7
+
+5. Query 5	Show the average ticket price for each venue, only if the capacity of the venue is below average, sorted by Ticket Price DESC
+Select Venue.ven_Name, AVG(ticket_Price) AS AVGTicketPrice
+From Venue, Event, Ticket
+Where Venue.Ven_Id = Event.Ven_ID AND Event.event_ID = Ticket.event_ID
+AND venue_Capacity < (Select AVG(ven_Capacity) From Venue)
+Group By Venue.Venue_Name
+Order By AVGTicketPrice DESC;
+
+6. Query 6	Show the total ticket revenue for each event. Only list the event name and total revenue, sorted from highest to lowest.
+Select Event.event_Name, Sum(ticket_Price) AS TotalRevenue
+From Event, Ticket
+Where Event.event_Id = Ticket.event_ID
+Group By Event.event_ID, Event.event_Name
+Order By TotalRevenue DESC;
+
+7. Query 7	Show each customer and the total number of tickets they have purchased. Only include customers who bought 2 or more tickets.
+Select cust_ID, cust_Fname, cust_Lname, Count(ticket_ID
+From Customer, Ticket
+Where Customer.cust_ID = Ticket.cust_ID
+Group By cust_ID, cust_Lname, cust_Fname
+Having COUNT(ticket_ID) >= 2;
+
 8. Query 8
+
 9. Query 9
+
 10. Query 10
 
 ## Database Information:
