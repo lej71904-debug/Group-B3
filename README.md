@@ -70,7 +70,7 @@ Query 2 provides a complete overview of all venues in the system along with key 
 3. Shows all events along with the name of the venue where each event is being held.
 <img width="718" height="578" alt="Query3" src="https://github.com/user-attachments/assets/ea77d70a-7f68-4cb2-a8f2-f184bf4f3c26" />
 
-Query 3 allows users to see where each event is taking place by linking events with their respective venues. Since the database only stores the event ID (and not a name), this query focuses on connecting each event to its venue. This is useful for organizing event logistics and ensuring events are assigned to the correct locations.
+Query 3 allows users to see where each event is taking place by linking events with their respective venues. Since the database only stores the event ID, this query focuses on connecting each event to its venue. This is useful for organizing event logistics and ensuring events are assigned to the correct locations.
 
 4. Displays all tickets that cost more than $50, ordered from highest to lowest price.
 <img width="827" height="500" alt="Query4" src="https://github.com/user-attachments/assets/9fdc0a6b-b541-47cf-bf0e-270b20acd27c" />
