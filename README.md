@@ -59,56 +59,56 @@ Events and resource items have a many-to-many relationship because an event can 
 ## Queries:
 <img width="720" height="486" alt="Queries" src="https://github.com/user-attachments/assets/efea77e6-3258-46a4-95c9-a8fa0a2b1a0e" />
 
-1. Lists all artists including their ID, name, contact phone number, and the number of events they are booked for, ordered alphabetically by artist name.
+1. Lists all artists including their ID, contact phone number, and the number of events they are booked for, ordered alphabetically by artist name.
 <img width="906" height="632" alt="Query1" src="https://github.com/user-attachments/assets/7e064139-eb88-4124-b280-36d7cbb45f74" />
 
 
-Query 1 allows users to view and organize all artists in the system along with their ID, contact information, and the number of events they are scheduled for. Using a LEFT JOIN with the ArtistBooking table ensures that artists with no bookings are still included. Sorting alphabetically by name makes it easier to locate a specific artist and maintain organized records. This is useful for administrative tasks such as contacting artists or tracking how active each artist is.
+Query 1 allows users to see each artist’s ID, contact info, and total event bookings. A LEFT JOIN with the ArtistBooking table ensures that artists with no bookings are included, and sorting alphabetically by name helps locate artists quickly.
 
 2. Lists all venues including their ID, name, address, capacity, type (if available), and the number of events held at each, ordered alphabetically by venue name.
 <img width="942" height="638" alt="Query2" src="https://github.com/user-attachments/assets/6465b55c-4ef0-44a2-85a4-c28799d67e24" />
 
-Query 2 provides a complete overview of all venues along with their ID, name, address, capacity, type (if available), and the number of events held there. Using a LEFT JOIN with the Event table ensures that venues with no scheduled events are still included. This helps users understand venue activity while planning or comparing locations. Sorting alphabetically makes it easier to reference each venue.
+Query 2 provides a full view of venues, including how many events are scheduled at each location. A LEFT JOIN with the Event table ensures venues without events are still listed, and alphabetical sorting makes the results easy to reference.
 
-3. Lists all events including their ID, date, type, and venue name, filtered to only include events whose type matches certain patterns, ordered by event date.
+3. Lists all events including their ID, date, type, and venue name, filtered to only include events of specific types, ordered by event date.
 <img width="922" height="598" alt="Query3" src="https://github.com/user-attachments/assets/d12c5f31-fdec-4dbe-a038-452770af487d" />
 
-Query 3 allows users to see each event along with the venue where it is scheduled, including the event ID, date, type, and venue name. A JOIN between Event and Venue tables retrieves the venue name for each event. Using a REGEXP filter on event_Type allows users to quickly find events of specific types, such as “Concert” or “Show.” Ordering by event_Date helps quickly identify upcoming events. This approach ensures the query returns results regardless of ticket data.
+Query 3 shows each event along with its venue, including ID, date, type, and venue name. A JOIN with the Venue table retrieves venue names, and a REGEXP filter highlights specific event types, such as “Concert” or “Show,” while ordering by date helps track upcoming events.
 
-4. Shows all tickets over $50 along with the first and last name of the customer who purchased each ticket.
+4. Shows all tickets over $50 along with the first and last name of the customer who purchased each ticket, ordered by ticket price descending.
 <img width="868" height="472" alt="Query4" src="https://github.com/user-attachments/assets/5c5ccbf2-e1a8-43e1-8708-9ce325108cec" />
 
-Query 4 now links tickets with the customers who purchased them, showing only higher-priced tickets (over $50). This allows users to identify which customers are buying premium tickets and which tickets generate more revenue. Sorting by ticket price in descending order makes it easy to quickly see the most expensive tickets and their buyers.
+Query 4 links tickets to the customers who purchased them and filters for higher-priced tickets. Sorting by ticket price in descending order helps identify premium ticket buyers and analyze revenue opportunities.
 
-5. Shows the average ticket price for each venue, but only for venues whose capacity is below the overall average venue capacity, sorted by average ticket price in descending order.
+5. Shows the average ticket price for each venue whose capacity is below the overall average, ordered by average ticket price descending.
 <img width="753" height="381" alt="Query5" src="https://github.com/user-attachments/assets/a5a2e7c9-6481-4c92-8595-d43211eaac38" />
 
-Query 5 allows users to analyze how smaller venues (below average capacity) price their tickets on average. This can help identify whether smaller venues charge higher or lower prices compared to others. Sorting by average ticket price makes it easier to compare venues and evaluate pricing strategies across different venue sizes.
+Query 5 allows users to analyze pricing trends for smaller venues by calculating the average ticket price. A subquery identifies venues below the average capacity, and ordering by average price helps compare venues efficiently. 
 
 6. Displays the total ticket revenue generated by each event, ordered from highest to lowest revenue.
 <img width="767" height="632" alt="Query6" src="https://github.com/user-attachments/assets/cdf980a3-c2b5-40ca-ac83-f9f37e370599" />
 
-Query 6 calculates the total ticket revenue generated by each event by connecting the Event and Ticket tables. The query uses the SUM(ticket_Price) aggregation function to add together the prices of all tickets purchased for a specific event. By grouping the results by event, the query combines all ticket sales associated with that event to determine its overall revenue.
+Query 6 calculates total revenue per event by summing ticket prices and grouping by event. This helps identify the highest-earning events and supports revenue tracking and analysis.
 
-7. Shows each event and the total number of tickets sold for that event, ordered from highest to lowest.
+7. Shows each event and the total number of tickets sold, ordered from highest to lowest.
 <img width="802" height="622" alt="Query7" src="https://github.com/user-attachments/assets/956e1719-86c7-4847-a56d-023187d3bc50" />
 
-Query 7 allows users to see how many tickets have been sold for each event. This provides a clear view of event popularity and demand. Events with higher ticket counts are likely more popular or successful, while events with lower counts may need additional promotion. Sorting the results in descending order makes it easy to quickly identify the top-performing events.
+Query 7 counts the tickets sold per event to measure popularity and demand. Sorting in descending order quickly highlights the top-performing events.
 
 8. Shows each artist and the number of events they are booked to perform at, ordered from highest to lowest.
 <img width="847" height="637" alt="Query8" src="https://github.com/user-attachments/assets/6796c15e-047e-4e59-8817-ff34762cdc25" />
 
-Query 8 uses the ArtistBooking table to accurately track which artists are scheduled to perform at events. This allows users to see how frequently each artist is booked. Artists with higher counts are likely more popular or in higher demand. Sorting in descending order makes it easy to identify the most active performers.
+Query 8 uses the ArtistBooking table to count events per artist, showing how frequently each performer is scheduled. Sorting descending identifies the most active or in-demand artists.
 
 9. Shows each event along with the names of the staff coordinator and backup coordinator.
 <img width="781" height="628" alt="Query9" src="https://github.com/user-attachments/assets/293a0d28-34bb-407a-ac26-06c500ae9f5c" />
 
-Query 9 connects each event with both its main coordinator and backup staff member. This is useful for understanding staff assignments and ensuring that every event is properly managed. Having both roles displayed helps with accountability and organization, especially when coordinating multiple events.
+Query 9 joins events with staff to display the main and backup coordinators. This helps track staff assignments and ensures accountability for event management.
 
-10. Shows each event along with the types of resources allocated to it and the number of resource items used for each type.
+10. Shows each event along with the types of resources allocated and the number of items for each type.
 <img width="790" height="632" alt="Query10" src="https://github.com/user-attachments/assets/d5ee4c31-a037-4cdd-a8a4-35f8af0974ef" />
 
-Query 10 analyzes how resources are distributed across events by connecting the Event, ResourceAllocation, ResourceItem, and ResourceType tables. This allows users to see what types of equipment or resources (such as staging, lighting, or sound equipment) are being used for each event and how many of each type are allocated. Grouping by both event and resource type provides a clear breakdown of resource usage for operational planning. This information is useful for logistics management, ensuring events have the necessary equipment and helping staff understand how resources are being distributed across events. Ordering the results helps highlight which resources are used most frequently for each event.
+Query 10 combines Event, ResourceAllocation, ResourceItem, and ResourceType to display resource usage per event. Grouping by event and resource type provides a clear breakdown for planning and logistics, while ordering highlights the most frequently used resources.
 
 ## Database Information:
 Name of the database: mb_B3
