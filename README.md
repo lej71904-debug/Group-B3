@@ -59,7 +59,7 @@ Events and resource items have a many-to-many relationship because an event can 
 ## Queries:
 1. Query 1	Show all artists. List their ID, name, and contact phone number
 Select artist_ID, artist_Name, artist_ContactPhone
-From artist
+From Artist
 Order by artist_name;
 
 2. Query 2	List all venues with its ID, Name, Address, and capacity
