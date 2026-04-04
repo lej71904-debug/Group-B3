@@ -81,10 +81,10 @@ Group By Venue.ven_Name
 Order By AVGTicketPrice DESC;
 
 6. Query 6	Show the total ticket revenue for each event. Only list the event name and total revenue, sorted from highest to lowest.
-Select Event.event_Name, Sum(ticket_Price) AS TotalRevenue
-From Event, Ticket
-Where Event.event_Id = Ticket.event_ID
-Group By Event.event_ID, Event.event_Name
+Select Event.event_ID, Sum(ticket_Price) AS 'TotalRevenue'
+From Event, Ticket 
+Where Event.event_Id = Ticket.event_ID 
+Group By Event.event_ID, Event.event_ID 
 Order By TotalRevenue DESC;
 
 7. Query 7	Show each customer and the total number of tickets they have purchased. Only include customers who bought 2 or more tickets.
