@@ -68,10 +68,10 @@ Query 1 allows users to view and organize all artists in the system along with t
 
 Query 2 provides a complete overview of all venues along with their ID, name, address, capacity, type (if available), and the number of events held there. Using a LEFT JOIN with the Event table ensures that venues with no scheduled events are still included. This helps users understand venue activity while planning or comparing locations. Sorting alphabetically makes it easier to reference each venue.
 
-3. Shows all events along with the name of the venue where each event is being held.
-<img width="718" height="578" alt="Query3" src="https://github.com/user-attachments/assets/ea77d70a-7f68-4cb2-a8f2-f184bf4f3c26" />
+3. Lists all events including their ID, date, type, and venue name, filtered to only include events whose type matches certain patterns, ordered by event date.
+<img width="922" height="598" alt="Query3" src="https://github.com/user-attachments/assets/d12c5f31-fdec-4dbe-a038-452770af487d" />
 
-Query 3 allows users to see where each event is taking place by linking events with their respective venues. Since the database only stores the event ID, this query focuses on connecting each event to its venue. This is useful for organizing event logistics and ensuring events are assigned to the correct locations.
+Query 3 allows users to see each event along with the venue where it is scheduled, including the event ID, date, type, and venue name. A JOIN between Event and Venue tables retrieves the venue name for each event. Using a REGEXP filter on event_Type allows users to quickly find events of specific types, such as “Concert” or “Show.” Ordering by event_Date helps quickly identify upcoming events. This approach ensures the query returns results regardless of ticket data.
 
 4. Shows all tickets over $50 along with the first and last name of the customer who purchased each ticket.
 <img width="868" height="472" alt="Query4" src="https://github.com/user-attachments/assets/5c5ccbf2-e1a8-43e1-8708-9ce325108cec" />
