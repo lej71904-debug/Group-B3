@@ -111,3 +111,8 @@ Query 10 combines Event, ResourceAllocation, ResourceItem, and ResourceType to d
 
 ## Database Information:
 Name of the database: mb_B3
+
+Additional information: Each query listed above is marked in the database using stored procedures which can be called using the following format:
+  CALL GP_Q1(); (For Query 1)
+  CALL GP_Q2(); (For Query 2)
+  etc.
