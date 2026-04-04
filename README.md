@@ -67,7 +67,7 @@ Query 2 provides a complete overview of all venues in the system along with key 
 
 3. Shows all events along with the name of the venue where each event is being held.
 
-Query 3 allows users to see where each event is taking place by linking events with their respective venues. This is useful for event planning and coordination, as it provides a clear view of event locations and helps avoid scheduling conflicts or confusion.
+Query 3 allows users to see where each event is taking place by linking events with their respective venues. Since the database only stores the event ID (and not a name), this query focuses on connecting each event to its venue. This is useful for organizing event logistics and ensuring events are assigned to the correct locations.
 
 4. Displays all tickets that cost more than $50, ordered from highest to lowest price.
 
