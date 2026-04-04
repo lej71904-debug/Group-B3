@@ -57,6 +57,8 @@ Events and resource items have a many-to-many relationship because an event can 
 
 
 ## Queries:
+<img width="762" height="532" alt="Queries" src="https://github.com/user-attachments/assets/7f4dec4b-d752-4ded-a992-f42ad13d5ab1" />
+
 1. Lists all artists including their ID, name, contact phone number, and the number of events they are booked for, ordered alphabetically by artist name.
 <img width="906" height="632" alt="Query1" src="https://github.com/user-attachments/assets/7e064139-eb88-4124-b280-36d7cbb45f74" />
 
