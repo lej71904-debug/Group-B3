@@ -81,9 +81,9 @@ Query 5 allows users to analyze how smaller venues (below average capacity) pric
 
 Query 6 helps identify which events are generating the most revenue. This is useful for evaluating event performance and determining which events are the most successful financially. Sorting the results from highest to lowest revenue makes it easy to prioritize top-performing events.
 
-7. Shows each customer along with the total number of tickets they have purchased, including only customers who have purchased at least one ticket.
+7. Shows each event and the total number of tickets sold for that event, ordered from highest to lowest.
 
-Query 7 provides insight into customer purchasing activity by showing how many tickets each customer has bought. Even though each customer may only have one ticket in this database, this query demonstrates how customer engagement could be analyzed in a real-world scenario. This information can help identify active customers and support marketing or loyalty efforts.
+Query 7 allows users to see how many tickets have been sold for each event. This provides a clear view of event popularity and demand. Events with higher ticket counts are likely more popular or successful, while events with lower counts may need additional promotion. Sorting the results in descending order makes it easy to quickly identify the top-performing events.
 
 8. Displays each artist along with the total number of events they are performing at, ordered from highest to lowest.
 
