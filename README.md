@@ -57,15 +57,15 @@ Events and resource items have a many-to-many relationship because an event can 
 
 
 ## Queries:
-1. Lists all artists including their ID, name, contact phone number, and genre, ordered alphabetically by artist name.
+1. Lists all artists including their ID, name, and contact phone number, ordered alphabetically by artist name.
 
 
-Query 1 allows users to view and organize all artists in the system along with their ID, contact information, and genre. Including genre gives extra context about the type of artist. Sorting alphabetically by name makes it easier to locate a specific artist and maintain organized records. This is useful for administrative tasks such as contacting artists or managing artist-related data.
+Query 1 allows users to view and organize all artists in the system along with their ID and contact information. Sorting alphabetically by name makes it easier to locate a specific artist and maintain organized records. This is useful for administrative tasks such as contacting artists or managing artist-related data.
 
-2.Lists all venues including their ID, name, address, capacity, and type (e.g., indoor or outdoor), ordered alphabetically by venue name.
+2.Lists all venues including their ID, name, address, capacity, and type (if available), ordered alphabetically by venue name.
 
 
-Query 2 provides a complete overview of all venues in the system along with key details such as ID, name, address, capacity, and type. Including the venue type gives more context for planning events. This allows users to understand venue sizes and locations, which is helpful when planning events, comparing venues, or scheduling purposes.
+Query 2 provides a complete overview of all venues in the system along with key details such as ID, name, address, capacity, and type (if available). Including the venue type gives more context for planning events. This allows users to understand venue sizes and locations, which is helpful when planning events, comparing venues, or scheduling purposes.
 
 3. Shows all events along with the name of the venue where each event is being held.
 <img width="718" height="578" alt="Query3" src="https://github.com/user-attachments/assets/ea77d70a-7f68-4cb2-a8f2-f184bf4f3c26" />
