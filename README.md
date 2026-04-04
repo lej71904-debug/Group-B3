@@ -73,10 +73,10 @@ Query 2 provides a complete overview of all venues along with their ID, name, ad
 
 Query 3 allows users to see where each event is taking place by linking events with their respective venues. Since the database only stores the event ID, this query focuses on connecting each event to its venue. This is useful for organizing event logistics and ensuring events are assigned to the correct locations.
 
-4. Displays all tickets that cost more than $50, ordered from highest to lowest price.
-<img width="827" height="500" alt="Query4" src="https://github.com/user-attachments/assets/9fdc0a6b-b541-47cf-bf0e-270b20acd27c" />
+4. Shows all tickets over $50 along with the first and last name of the customer who purchased each ticket.
+<img width="868" height="472" alt="Query4" src="https://github.com/user-attachments/assets/5c5ccbf2-e1a8-43e1-8708-9ce325108cec" />
 
-Query 4 helps identify higher-priced tickets, which may represent premium or high-demand events. Sorting by price in descending order makes it easy to quickly see the most expensive tickets, allowing managers to analyze pricing strategies or identify high-revenue opportunities.
+Query 4 now links tickets with the customers who purchased them, showing only higher-priced tickets (over $50). This allows users to identify which customers are buying premium tickets and which tickets generate more revenue. Sorting by ticket price in descending order makes it easy to quickly see the most expensive tickets and their buyers.
 
 5. Shows the average ticket price for each venue, but only for venues whose capacity is below the overall average venue capacity, sorted by average ticket price in descending order.
 <img width="753" height="381" alt="Query5" src="https://github.com/user-attachments/assets/a5a2e7c9-6481-4c92-8595-d43211eaac38" />
