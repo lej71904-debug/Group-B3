@@ -65,7 +65,7 @@ Events and resource items have a many-to-many relationship because an event can 
 
 Query 1 allows users to see each artist’s ID, contact info, and total event bookings. A LEFT JOIN with the ArtistBooking table ensures that artists with no bookings are included, and sorting alphabetically by name helps locate artists quickly.
 
-2. Lists all venues including their ID, name, address, capacity, type (if available), and the number of events held at each, ordered alphabetically by venue name.
+2. Lists all venues including their ID, name, address, capacity, and the number of events held at each, ordered alphabetically by venue name.
 <img width="942" height="638" alt="Query2" src="https://github.com/user-attachments/assets/6465b55c-4ef0-44a2-85a4-c28799d67e24" />
 
 Query 2 provides a full view of venues, including how many events are scheduled at each location. A LEFT JOIN with the Event table ensures venues without events are still listed, and alphabetical sorting makes the results easy to reference.
