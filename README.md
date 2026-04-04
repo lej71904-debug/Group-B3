@@ -57,15 +57,15 @@ Events and resource items have a many-to-many relationship because an event can 
 
 
 ## Queries:
-1. Shows all artists including their ID, name, and contact phone number, ordered alphabetically by artist name.
-<img width="833" height="633" alt="Query1" src="https://github.com/user-attachments/assets/7af10f95-9ec2-4ea2-b4a0-aceb5863f4b4" />
+1. Lists all artists including their ID, name, contact phone number, and genre, ordered alphabetically by artist name.
 
-Query 1 allows users to easily view and organize all artists in the system along with their contact information. Sorting alphabetically makes it easier to locate a specific artist and maintain organized records. This is useful for administrative tasks such as contacting artists or managing artist-related data.
 
-2. Lists all venues with their ID, name, address, and capacity.
-<img width="873" height="633" alt="Query2" src="https://github.com/user-attachments/assets/598767bf-d8a6-4657-bdfc-81fd578a0856" />
+Query 1 allows users to view and organize all artists in the system along with their ID, contact information, and genre. Including genre gives extra context about the type of artist. Sorting alphabetically by name makes it easier to locate a specific artist and maintain organized records. This is useful for administrative tasks such as contacting artists or managing artist-related data.
 
-Query 2 provides a complete overview of all venues in the system along with key details about each location. This allows users to understand venue sizes and locations, which is helpful when planning events or comparing different venues for scheduling purposes.
+2.Lists all venues including their ID, name, address, capacity, and type (e.g., indoor or outdoor), ordered alphabetically by venue name.
+
+
+Query 2 provides a complete overview of all venues in the system along with key details such as ID, name, address, capacity, and type. Including the venue type gives more context for planning events. This allows users to understand venue sizes and locations, which is helpful when planning events, comparing venues, or scheduling purposes.
 
 3. Shows all events along with the name of the venue where each event is being held.
 <img width="718" height="578" alt="Query3" src="https://github.com/user-attachments/assets/ea77d70a-7f68-4cb2-a8f2-f184bf4f3c26" />
