@@ -4,11 +4,11 @@
 47114 Group B3
 
 ## Team Members:
-1. Landon Johnson, Conceptual Modeler
-2. Yash Kirtane, Group Leader
-3. Chris Ennis, Database Designer
-4. Charan Nuthalapati, Data Wrangler
-5. Lawrence Carpenter, SQL Writer
+1. Landon Johnson: Conceptual Modeler
+2. Yash Kirtane: Group Leader
+3. Chris Ennis: Database Designer
+4. Charan Nuthalapati: Data Wrangler
+5. Lawrence Carpenter: SQL Writer
 
 ## Problem Description:
 The objective of this project is to design and implement a relational database that models the operations of The Live Music Circuit (LMC). LMC is responsible for coordinating live music events, managing venue partnerships, scheduling artists, and allocating production resources needed for shows.
